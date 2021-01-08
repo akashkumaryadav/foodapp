@@ -1,6 +1,6 @@
 <template>
   <section class="restaurantinfo" id="restaurants">
-    <div v-for="store in fooddata" :key="store.id">
+    <div v-for="store in datasource" :key="store.id">
       <h2>{{ store.name }}</h2>
       <p>DeliveryTime :{{ store.deliveryTime }}</p>
       <p>Rating :{{ store.rating }}</p>
@@ -26,11 +26,11 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
-
 export default {
-  computed: {
-    ...mapState(["fooddata"])
+  props: {
+    datasource: {
+      type: Array
+    }
   }
 };
 </script>
