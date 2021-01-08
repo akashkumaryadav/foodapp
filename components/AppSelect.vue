@@ -6,7 +6,7 @@
       :name="select"
       :id="select"
     >
-      <option :value="none">--All (choice to filter)--</option>
+      <option :value="null">--All (choice to filter)--</option>
       <option v-for="option in selectChoices" :key="option" :value="option">{{
         option
       }}</option>

@@ -17,7 +17,9 @@
               <h4>{{ item.item }}</h4>
               <p>Price : ${{ item.price.toFixed(2) }}</p>
             </div>
-            <button class="ghost">View item</button>
+            <nuxt-link :to="`/items/${item.id}`">
+              <button class="ghost">View Item</button></nuxt-link
+            >
           </div>
         </div>
       </div>
